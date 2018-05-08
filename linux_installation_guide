@@ -27,8 +27,11 @@ linux_installation_guide:
     4). install the miniupnpc [ 1.8 ]
             download http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.20131209.tar.gz
             
+            cd /
+                       
             wget -O miniupnpc-1.8.20131209.tar.gz http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.20131209.tar.gz
             tar -zxvf miniupnpc-1.8.20131209.tar.gz
+            cd miniupnpc-1.8.20131209
             cmake .
             make
             To install the library and headers on the system use :
