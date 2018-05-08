@@ -105,6 +105,19 @@ if [ -d "$fc" ]; then
     cd $fc
     cmake .
     make
+#到这一步出错，请大神指点，谢谢！
+#-- Build files have been written to: /fast-compile
+#root@zxl:/fast-compile# make
+#Scanning dependencies of target project_secp256k1
+#[  1%] Performing autogen step for 'project_secp256k1'
+#Can't exec "aclocal": No such file or directory at /usr/share/autoconf/Autom4te/FileUtils.pm line 326.
+#autoreconf: failed to run aclocal: No such file or directory
+#CMakeFiles/project_secp256k1.dir/build.make:117: recipe for target 'vendor/secp256k1-zkp/src/project_secp256k1-stamp/project_secp256k1-autogen' failed
+#make[2]: *** [vendor/secp256k1-zkp/src/project_secp256k1-stamp/project_secp256k1-autogen] Error 1
+#CMakeFiles/Makefile2:339: recipe for target 'CMakeFiles/project_secp256k1.dir/all' failed
+#make[1]: *** [CMakeFiles/project_secp256k1.dir/all] Error 2
+#Makefile:127: recipe for target 'all' failed
+#make: *** [all] Error 2"
     sudo cp libfc.a  /usr/local/lib/
     sudo cp $fc/vendor/secp256k1-zkp/src/project_secp256k1-build/.libs/libsecp256k1.a /usr/local/lib
     cd ..
